@@ -2,8 +2,10 @@
 
 const fs = require('fs').promises;
 
-fs.readFile('./text.txt', 'utf-8').then((data) =>
-  fs.writeFile('./new.txt', `${data}\nHACKERMANS I\`m in`, 'utf-8')
+fs.readFile('./text.txt', 'utf-8').then((data) =>{
+  const newData = `${data}\nHACKERMANS I\`m in`;
+  fs.writeFile('./new.txt', newData, 'utf-8');
+}
 );
 
 // const {MyMath} = require('./MyMath.js');
